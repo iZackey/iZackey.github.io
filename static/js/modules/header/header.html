@@ -1,0 +1,8 @@
+<div id="header">
+	<h1>你好！欢迎<span v-text="oUser.userObj && oUser.userObj.userName" v-bind:style="{color:'red'}"></span>！,你的id号是：<span v-text="oUser.userObj && oUser.userObj.userDd"></span></h1>
+	<ul>
+		<li v-for="item in aMenu"><a v-bind:href="item.url"><span v-text="item.title"></span></a></li>
+	</ul>
+	<hr>
+	当前路径：<span>{{path}}</span>
+</div>

@@ -1,17 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>测试qiqiblog首页</title>
+    <meta charset="UTF-8">
+    <title v-text="documentTitle"></title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
 </head>
 <body>
-	
 
-测试首页
+<div id="app" style="display: none;">
+    <!-- 路由组件调用 -->
+    <router-view>加载中...</router-view>
+</div>
 
-<h1>标题</h1>
 
-<script src="test.js"></script>
+<script src="./static/js/plugins/jquery-1.11.2.js"></script>
+<script src="./static/js/plugins/sea.js"></script>
+<script src="./static/js/plugins/vue.js"></script>
+<script src="./static/js/plugins/vue-router.min.js"></script>
+<script src="./static/js/config.js"></script>
+<script>
+    seajs.config({
+        base: "./"+gMain.jsdir  //seajs的基础路径（组织人事，元数据项目的模块）
+    });
 
+    $(function () {
+        seajs.use(["js/modules/header/header.js"],function (Header) {
+            new Header({
+                callback:function () {
+                    seajs.use(["js/router.js"]);
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

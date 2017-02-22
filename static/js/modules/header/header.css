@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+#header{
+    border: 5px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+}
+#header li{
+    line-height: 30px;
+}

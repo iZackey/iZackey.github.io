@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+#app{
+    border: 5px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+}

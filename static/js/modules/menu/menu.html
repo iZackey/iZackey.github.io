@@ -1,0 +1,6 @@
+<ul v-if="alist && alist.length">
+   <li v-for="item in alist">
+	   <span>{{item.title}}</span>
+	   <menu v-bind:alist="item.children"></menu>
+   </li>
+</ul>

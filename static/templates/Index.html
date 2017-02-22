@@ -1,0 +1,56 @@
+<div id="div1">
+	<hr>
+
+    <h3>这里是默认首页</h3>
+	<hr>
+	<input type="button" value="点击我，我是弹窗" v-on:click="showDialog">
+	<hr>
+
+    <p v-html="myText"></p>
+
+    <hr>
+
+     <form action="">
+     	<input type="text" v-model="myText">
+     </form>
+
+     <hr>
+
+	 <h3>动画1：</h3>
+	 <input type="button" value="{{show?'隐藏':'显示'}}" v-on:click="showHello()"> <br>
+     <div v-if="show" transition="expand">hello</div>
+
+     <h3>动画2</h3> 
+       
+     <div v-show="ok" transition="bounce">看我</div> 
+     <br>
+     <br>
+     <input type="button" value="Toggle" v-on:click="ok = !ok">
+
+     <h3>动画3</h3>
+     <div style="height: 55px;line-height: 55px;">
+     	<p v-show="ok2" transition="fade">vuejs动画</p>
+     </div>
+     <input type="button" value="Toggle" v-on:click="ok2 = !ok2">
+
+
+	<hr>
+
+	<h1>图片的demo</h1>
+	<div id="img_list">
+		<template v-for="item in aImg">
+			<div class="img"><img v-bind:src="item.src" v-on:load="imgLoad($event)" v-bind:style="{'width':'100px'}"></div>
+		</template>
+	</div>
+
+	<hr>
+
+	<div id="div1" style="width:500px;height:500px;border:1px solid #ccc;">
+		<div v-my-directive2="{a:1}">
+			<span>呵呵</span>
+		</div>
+	</div>
+
+
+
+</div>

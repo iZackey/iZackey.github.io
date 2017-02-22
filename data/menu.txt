@@ -1,0 +1,1 @@
+{"menu":[{"title":"menu1","url":"#!/"},{"title":"menu2","url":"#!/bar"},{"title":"menu3","url":"#!/foo/a/b/123456789"},{"title":"menu4","url":"#!/three"}],"userObj":{"userName":"zhangsan","userDd":"123456"}}
